@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ledgerflow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img class="brand-mark" src="../assets/icons/ledgerflow-128.png" alt="">
+      <div><h1>ledgerflow</h1><p>Trello <span>→</span> QuickBooks</p></div>
+    </div>
+    <div class="header-menu">
+      <button id="settingsButton" class="icon-button" type="button" title="Account and connection settings" aria-label="Open account and connection settings" aria-expanded="false" aria-controls="accountMenu"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.4-2.4 1A8 8 0 0 0 14.8 6l-.3-2.6h-4L10.2 6a8 8 0 0 0-1.7 1.1l-2.4-1-2 3.4 2 1.5a7 7 0 0 0 0 2l-2 1.5 2 3.4 2.4-1a8 8 0 0 0 1.7 1.1l.3 2.6h4l.3-2.6a8 8 0 0 0 1.7-1.1l2.4 1 2-3.4-2-1.5c.1-.3.1-.7.1-1Z"/></svg></button>
+      <div id="accountMenu" class="account-menu hidden" role="menu">
+        <button id="manageConnection" class="menu-item" type="button" role="menuitem">Connection settings</button>
+        <button id="signOut" class="menu-item danger" type="button" role="menuitem">Sign out</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="status" class="status-pill hidden" role="status" aria-live="polite"><i></i><span>Ready</span></div>
+    <section id="onboarding" class="onboarding card" aria-labelledby="onboardingHeading">
+      <span class="eyebrow">Welcome to ledgerflow</span>
+      <h2 id="onboardingHeading">Connect your Trello workspace</h2>
+      <p id="onboardingCopy" class="section-copy">Sign in securely with Google, then connect the Trello workspace you use for Ledgerflow.</p>
+      <label id="onboardingWorkspaceField" class="hidden">Workspace ID<input id="onboardingOrganizationId" autocomplete="off" placeholder="Your organization ID"></label>
+      <button id="onboardingConnect" class="onboarding-primary google-login-button" type="button"><svg class="google-logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.55-.2-2.27H12v4.3h6.44a5.5 5.5 0 0 1-2.39 3.61v3h3.87c2.27-2.09 3.57-5.17 3.57-8.64Z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.07 7.95-2.9l-3.87-3A7.2 7.2 0 0 1 12 19.2a7.67 7.67 0 0 1-7.2-5.3H.8v3.1A12 12 0 0 0 12 24Z"/><path fill="#FBBC05" d="M4.8 13.9a7.3 7.3 0 0 1 0-3.8V7H.8a12 12 0 0 0 0 10.8l4-3.9Z"/><path fill="#EA4335" d="M12 4.8c1.76 0 3.34.61 4.59 1.81l3.43-3.43C17.95 1.18 15.23 0 12 0A12 12 0 0 0 .8 7l4 3.1A7.67 7.67 0 0 1 12 4.8Z"/></svg><span>Login with Google</span></button>
+      <button id="onboardingManual" class="onboarding-secondary" type="button">Configure manually</button>
+    </section>
+    <section id="settings" class="settings-overlay hidden" aria-label="Connection settings">
+      <div class="settings-sheet card">
+        <div class="section-heading"><div><span class="eyebrow">Connection</span><h2>Settings</h2></div><button id="cancelSettings" class="close-button" type="button" aria-label="Close settings">×</button></div>
+        <p class="supporting-copy">Connect your Trello workspace. Your connection is kept on this browser until you change or remove it.</p>
+        <label>Workspace ID<input id="organizationId" autocomplete="off" placeholder="Your organization ID"></label>
+        <label>Token<input id="token" type="password" autocomplete="off" placeholder="Connect with Trello below"></label>
+        <div class="actions"><button id="authorizeTrello" type="button">Connect with Trello</button><button id="saveSettings" type="button">Save connection</button></div>
+      </div>
+    </section>
+    <section id="listsView">
+      <div class="section-heading workflow-heading"><button id="refresh" class="text-button" type="button" title="Refresh data"><svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.34 5.66M20 4v7h-7"/></svg>Refresh</button></div>
+      <label class="board-picker"><span>Trello board</span><select id="boardSelect" aria-label="Trello board"></select></label>
+      <div id="matchNotice" class="match-notice hidden"></div>
+      <div id="lists" class="stack" aria-live="polite"></div>
+      <section id="cardsView" class="hidden">
+        <button id="backToLists" class="back-button" type="button"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>Back to matches</button>
+        <div class="section-heading review-heading"><div><h2 id="cardsHeading">Review cards</h2></div><span id="cardCount" class="count-badge">0</span></div>
+        <p id="cardsSummary" class="section-copy"></p>
+        <div id="cards" class="stack card-stack"></div>
+        <div id="reconciliationNotice" class="reconciliation-notice hidden"></div>
+        <div class="sticky-action">
+          <button id="pasteAll" class="paste-all" type="button"><span>Transfer to QuickBooks</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+          <p id="automationHint"><svg viewBox="0 0 24 24"><path d="M12 8v4m0 4h.01M10.3 3.7 2.6 17a2 2 0 0 0 1.73 3h15.34a2 2 0 0 0 1.73-3L13.7 3.7a2 2 0 0 0-3.4 0Z"/></svg>Close Chrome DevTools before transfer. You’ll review everything before saving.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1429 @@
+{
+  "createdAt": "July 9, 2026 at 4:20:59 PM UTC-5",
+  "email": "alicia.sterling18@gmail.com",
+  "error": null,
+  "input": {
+    "clientId": "sandbox-company-us-3061",
+    "bankRules": [
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Cost of Goods Sold",
+        "conditions": "Bank text contains \"Allstate\"",
+        "name": "SVS TESTING+",
+        "payee": "SVS",
+        "settings": "Set Category to \"Cost of Goods Sold\", Set Payee to \"SVS\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Advertising",
+        "conditions": "Bank text contains \"Mailchimp\"",
+        "name": "Mailchimp",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Advertising\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Caribou Coffee\"",
+        "name": "Caribou Coffee",
+        "payee": "Bob's Burger Joint",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Bob's Burger Joint\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Description contains \"Campesino Mexican G\"",
+        "name": "Campesino Mexican Grill",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Corner Cafe\"",
+        "name": "Corner Cafe",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Mclains Bakery\"",
+        "name": "Mclains Bakery",
+        "payee": "Bob's Burger Joint",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Bob's Burger Joint\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Diamond Accounti\"",
+        "name": "Diamond Accounting Solutions",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Dunkin\"",
+        "name": "Dunkin Donuts",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Fuel Expresso\", and Amount is greater than -15.00",
+        "name": "Fuel Expresso Gas",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Jose Peppers\"",
+        "name": "Jose Peppers",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Kingdom Coffee\"",
+        "name": "Kingdom Coffee",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Crumbl\"",
+        "name": "Crumbl",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Home Depot\"",
+        "name": "Home Depot",
+        "payee": "Bob's Burger Joint",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Bob's Burger Joint\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Meddys\"",
+        "name": "Meddys",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Menard\", or Bank text contains \"MNRD-\", or Bank text contains \"menards\"",
+        "name": "Menards",
+        "payee": "Bob's Burger Joint",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Bob's Burger Joint\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Over Flow co\"",
+        "name": "Overflow Coffeehouse",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Red Door Grill\"",
+        "name": "Red Door Grill",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Sonic\"",
+        "name": "Sonic",
+        "payee": "Bob's Burger Joint",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Bob's Burger Joint\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Renegade cof\"",
+        "name": "Renegade Coffee",
+        "payee": "Bob's Burger Joint",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Bob's Burger Joint\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Rochester br\"",
+        "name": "Rochester Brewing",
+        "payee": "Bob's Burger Joint",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Bob's Burger Joint\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Insurance",
+        "conditions": "Bank text contains \"The Hartford\"",
+        "name": "The hartford",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Insurance\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Hemma hemma\"",
+        "name": "Hemma Hemma",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"spin OLATHE\", or Bank text contains \"spin pizza\", or Bank text contains \"spin overland\"",
+        "name": "Spin pizza",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Cal Telephone\", Set Memo to \"Point Of Sale Withdrawal TST*SPIN OLATHE -NEKansas City MOUS\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Westlake Hardware\"",
+        "name": "Westlake Hardware",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Advertising",
+        "conditions": "Bank text contains \"Clickup\"",
+        "name": "Clickup",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Advertising\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Graham Brown Inc\"",
+        "name": "Graham Brown Inc",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Portola Paints\"",
+        "name": "Portola Paints",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Thibaut Wallpaper Fabr\"",
+        "name": "Thibaut Wallpaper",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"york Wallcoverings\"",
+        "name": "York Wall Coverings",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Thibaut\"",
+        "name": "THIBAUT",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Advertising",
+        "conditions": "Bank text contains \"Acuity\"",
+        "name": "acuity",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Advertising\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Checking",
+        "conditions": "Bank text contains \"Spire bill\"",
+        "name": "spire",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Checking\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Uswalldecor\"",
+        "name": "US Wall Decor",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Advertising",
+        "conditions": "Bank text contains \"Honeybook\"",
+        "name": "Honeybook",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Advertising\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Advertising",
+        "conditions": "Bank text contains \"Microsoft\"",
+        "name": "microsoft",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Advertising\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Description contains \"wallpaperdirect\"",
+        "name": "wallpaperdirect",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Menards\"",
+        "name": "menards refund",
+        "payee": "Bob's Burger Joint",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Bob's Burger Joint\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Lowe's\", or Bank text contains \"lowes\"",
+        "name": "Lowes",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Conoco\", and Amount is greater than -15.00",
+        "name": "CONOCO",
+        "payee": "Cigna Health Care",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cigna Health Care\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Conoco\", and Amount is less than -15.00",
+        "name": "CONOCO meals",
+        "payee": "Cigna Health Care",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Cigna Health Care\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Advertising",
+        "conditions": "Bank text contains \"QBooks\", and Amount equals -91.50",
+        "name": "qb subscription",
+        "payee": "Cigna Health Care",
+        "settings": "Set Category to \"Advertising\", Set Payee to \"Cigna Health Care\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Bank Charges",
+        "conditions": "Bank text contains \"Transfer TO : XXXX9700\"",
+        "name": "transfer x9700",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Bank Charges\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Description contains \" Internet Transfer TO : XXXX5703\"",
+        "name": "D west contractor",
+        "payee": "Bob's Burger Joint",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Bob's Burger Joint\"",
+        "status": "Disabled"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Bank Charges",
+        "conditions": "Bank text contains \"Prime Video Channel\"",
+        "name": "prime video",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Bank Charges\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Amazon.com\", or Bank text contains \"amazon prime\", or Bank text contains \"amzn.com\"",
+        "name": "amazon",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Bank Charges",
+        "conditions": "Bank text contains \"Transfer TO : XXXX5652\"",
+        "name": "transfer x5652",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Bank Charges\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Arbys\", or Bank text contains \"arby's\"",
+        "name": "arbys",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Bibibop\"",
+        "name": "BIBIBOP",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Black Dog coffe\"",
+        "name": "black dog coffee",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"indy bloom\"",
+        "name": "Indy bloom",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Casey's\", and Amount is greater than -15.00",
+        "name": "caseys",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"NICKANDJAKE\"",
+        "name": "Nick and Jakes",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile:Fuel",
+        "conditions": "Bank text contains \"Venmo\"",
+        "name": "Venmo",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile:Fuel\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Wallism\"",
+        "name": "wallism",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Insurance",
+        "conditions": "Bank text contains \"State Farm\"",
+        "name": "state farm",
+        "payee": "Cigna Health Care",
+        "settings": "Set Category to \"Insurance\", Set Payee to \"Cigna Health Care\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Description contains \"Starbucks\"",
+        "name": "starbucks",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Advertising",
+        "conditions": "Bank text contains \"Transfer FROM: XXXX9700\"",
+        "name": "transfer from 9700",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Advertising\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Sherwin Williams\", or Bank text contains \"Sherwin-Williams\"",
+        "name": "Sherwin williams",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Wall Blush\", and Bank text contains \"wallblush\"",
+        "name": "wall blush",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Phillips 66\", and Amount is greater than -15.00",
+        "name": "Phillips 66",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Panera Bread\"",
+        "name": "panera bread",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Olive Garden\"",
+        "name": "olive garden",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Michaels store\"",
+        "name": "michaels",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Jersey Mikes\"",
+        "name": "jersey mikes",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Hy-Vee\"",
+        "name": "hy vee",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Gimmersta Wallpaper\"",
+        "name": "Gimmersta",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"The Station\", and Amount is greater than -14.99",
+        "name": "the station",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Sunoco\"",
+        "name": "sunoco",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Strickland\"",
+        "name": "strickland brothers",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Shell oil\"",
+        "name": "shell",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Price Chopper\"",
+        "name": "price chopper",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Murphy USA\"",
+        "name": "murphy",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Love's\"",
+        "name": "loves",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Circle K\", and Amount is greater than -15.00",
+        "name": "circle k",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Chick-Fil-A\"",
+        "name": "chick fil a",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Charlies Car Wash\"",
+        "name": "charlies car wash",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Cenex\"",
+        "name": "Cenex",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Buc Ee\", and Amount is greater than -15.00",
+        "name": "buc-ees",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Break Time\", and Amount is greater than -15.00",
+        "name": "break time",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Ace Hardware\"",
+        "name": "Ace hardware",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Transfer TO : XXXX4702\"",
+        "name": "Kelsey transfer",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Transfer TO : XXXX5937\"",
+        "name": "shannon transfer",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Transfer TO : XXXX5703\"",
+        "name": "diedre transfer",
+        "payee": "Bob's Burger Joint",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Bob's Burger Joint\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Transfer TO : XXXX9707\"",
+        "name": "lindsey transfer",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Transfer TO : XXXX9366\"",
+        "name": "stacy thompson transfer",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Transfer TO : XXXX3800\"",
+        "name": "transfer to x3800",
+        "settings": "Set Category to \"Dues & Subscriptions\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Speed Stop\"",
+        "name": "speed stop",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Schlotzsky's\"",
+        "name": "Schlotzskys",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"QT 252 OUTSIDE\"",
+        "name": "qt 252",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"QT 240 OUTSIDE\"",
+        "name": "qt 240",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"54th Street\"",
+        "name": "54th street",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Public Storage\"",
+        "name": "public storage",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Mi Ranchito\"",
+        "name": "mi ranchito",
+        "payee": "Cigna Health Care",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Cigna Health Care\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"McDonald's\"",
+        "name": "mcdonald",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Molcajete Mexican\"",
+        "name": "Molcajete",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Advertising",
+        "conditions": "Bank text contains \"Dollar Tree\"",
+        "name": "dollar tree",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Advertising\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Advertising",
+        "conditions": "Bank text contains \"Goin Postal\"",
+        "name": "goin postal",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Advertising\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"HATTIES FINE COFFEE\"",
+        "name": "hatties coffee",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Headrush Roa\"",
+        "name": "headrush",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Hobby Lobby\", or Bank text contains \"hobbylobby\"",
+        "name": "hobby lobby",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Veil cafe\"",
+        "name": "veil cafe",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"URBAN PRAIRIE C\"",
+        "name": "URBAN PRAIRIE Coffee",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Kravet\"",
+        "name": "kravet",
+        "payee": "Cigna Health Care",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Cigna Health Care\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Transfer FROM: XXXX3800\"",
+        "name": "transfer from 3800",
+        "settings": "Set Category to \"Dues & Subscriptions\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Amazon\"",
+        "name": "amazon refund",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Cafe Ca Phe\"",
+        "name": "CAFE CA PHE",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Transfer TO : XXXX8708\"",
+        "name": "transfer to 8708",
+        "settings": "Set Category to \"Automobile\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Bank Charges",
+        "conditions": "Bank text contains \"OPNLP FRIDAYS\"",
+        "name": "OPNLP FRIDAYS",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Bank Charges\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Schumacher\"",
+        "name": "schumacher",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Advertising",
+        "conditions": "Bank text contains \"Aichatapp\"",
+        "name": "ai chat app",
+        "payee": "Cigna Health Care",
+        "settings": "Set Category to \"Advertising\", Set Payee to \"Cigna Health Care\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Aldi\"",
+        "name": "aldi",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"7 Brew Coffee\"",
+        "name": "7 brew",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Burger King\"",
+        "name": "burger king",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Casey's\", and Amount is less than -15.00",
+        "name": "caseys meals",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Chipotle\"",
+        "name": "chipotle",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Hammerhand Coffee\"",
+        "name": "hammerhand coffee",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Harbor Freight Tools\"",
+        "name": "harbor freight",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Thibaut Wallpaper Fabr\"",
+        "name": "thibaut refund",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"wallpapers to go\"",
+        "name": "wallpapers to go",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"qt 159\", and Amount is greater than -15.00",
+        "name": "qt 159",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"qt 179\", and Amount is greater than -15.00",
+        "name": "qt 179",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"qt\", and Bank text contains \"outside\", and Amount is greater than -14.99",
+        "name": "qt",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"qt 353\", and Amount is greater than -14.99",
+        "name": "qt 353",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\", Set Memo to \"Point Of Sale Withdrawal QT 353 WICHITA KSUS\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Scooter's Coffee\", or Bank text contains \"scooters coffee\"",
+        "name": "scooters coffee",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Wal-Mart\", or Bank text contains \"walmart\", or Bank text contains \"wm supercenter\"",
+        "name": "walmart",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Austins Bar\"",
+        "name": "austins bar",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"The Station\", and Amount is less than -15.00",
+        "name": "the station meals",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Taco Bell\"",
+        "name": "taco bell",
+        "payee": "Cigna Health Care",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Cigna Health Care\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"TERIYAKI MADNES\"",
+        "name": "TERIYAKI MADNESs",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"QT 153\", and Amount is greater than -14.99",
+        "name": "QT 153",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Target\"",
+        "name": "target",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"Interest Charge\"",
+        "name": "chase interest paid",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"BP\", and Amount is greater than -14.99",
+        "name": "BP",
+        "payee": "Books by Bessie",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Books by Bessie\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Friendly bea\"",
+        "name": "friendly bean coffee",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Hometown Nutrit\"",
+        "name": "hometown nutrition",
+        "payee": "Chin's Gas and Oil",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Chin's Gas and Oil\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Jersey Mike\"",
+        "name": "jersey mike",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Disposal Fees",
+        "conditions": "Bank text contains \"perigold\"",
+        "name": "perigold",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Disposal Fees\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"QuikTrip\", and Amount is greater than -14.99",
+        "name": "quiktrip fuel",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"QuikTrip\", and Amount is less than -15.00",
+        "name": "quiktrip meal",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Wendy's\"",
+        "name": "wendys",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Dues & Subscriptions",
+        "conditions": "Bank text contains \"Agency Social\"",
+        "name": "agency social",
+        "payee": "Brad Sterling",
+        "settings": "Set Category to \"Dues & Subscriptions\", Set Payee to \"Brad Sterling\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Liberty Nutrition\"",
+        "name": "liberty nutrition",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Mokas Coffee\"",
+        "name": "moka coffee",
+        "payee": "Brosnahan Insurance Agency",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Brosnahan Insurance Agency\"",
+        "status": "Active"
+      },
+      {
+        "appliesTo": "ALL ACCOUNTS",
+        "category": "Automobile",
+        "conditions": "Bank text contains \"Spangles\"",
+        "name": "spangles",
+        "payee": "Cal Telephone",
+        "settings": "Set Category to \"Automobile\", Set Payee to \"Cal Telephone\"",
+        "status": "Active"
+      }
+    ]
+  },
+  "capture": {
+    "rulesCapturedAt": "2026-07-09T20:45:53.450Z",
+    "rulesComplete": true,
+    "transactionsCapturedAt": "2026-07-09T21:08:14.439Z"
+  },
+  "client": {
+    "name": "Sandbox Company US 3061",
+    "raw": "<span data-id=\"labelNode\" class=\"qbo-navigation-widgets-ui companyName label fusionStyleOverrides\" role=\"heading\" aria-level=\"2\" data-di-mask=\"true\">Sandbox Company US 3061</span>",
+    "source": "dom:span"
+  },
+  "dryRun": false,
+  "mode": "selected-vendor-transactions-plus-bank-rules",
+  "schemaVersion": 1,
+  "transactions": [
+    {
+      "amount": "$100.00",
+      "category": "Cost of Goods Sold",
+      "date": "06/24/2026",
+      "payee": "To Be Categorized",
+      "referenceNumber": "72",
+      "source": "vendor-transaction-list",
+      "transactionType": "Check",
+      "vendorName": "To Be Categorized"
+    },
+    {
+      "amount": "$100.00",
+      "category": "Cost of Goods Sold",
+      "date": "06/24/2026",
+      "payee": "To Be Categorized",
+      "referenceNumber": "71",
+      "source": "vendor-transaction-list",
+      "transactionType": "Check",
+      "vendorName": "To Be Categorized"
+    }
+  ],
+  "vendor": {
+    "name": "To Be Categorized",
+    "source": "dom:vendor-details-content-name-label"
+  },
+  "jobType": "quickbooks-check-processing",
+  "operationName": "projects/quickbooks-check-processing/locations/us-central1/operations/28491531-ed31-4452-bb22-a5a8b371a283",
+  "requestId": "1b525889-4f36-4efc-879e-352268b0bc3f",
+  "result": {
+    "bankRuleCount": 144,
+    "dryRun": false,
+    "processedSelectionCount": 2
+  },
+  "transactionSummary": {
+    "failed": 2,
+    "pending": 0,
+    "processing": 0,
+    "succeeded": 0,
+    "total": 2
+  },
+  "status": "DONE",
+  "transactionProgress": {
+    "items": {
+      "tx-0001": {
+        "attachmentId": "1000000101",
+        "completedAt": "2026-07-09T21:23:05.792903+00:00",
+        "errorMessage": "llm-failed",
+        "failureCode": "EXTRACTION_FAILED",
+        "mode": "live-run",
+        "outcome": {
+          "attachmentFileName": "CheckImage svs.jpg",
+          "ocrStatus": "no-text",
+          "processingMethod": "llm-failed",
+          "updateStatus": "no-payee"
+        },
+        "purchaseId": "149",
+        "sourceIndex": 0,
+        "stage": "COMPLETE",
+        "startedAt": "2026-07-09T21:23:01.598285+00:00",
+        "status": "FAILED",
+        "transaction": {
+          "amount": "$100.00",
+          "category": "Cost of Goods Sold",
+          "date": "06/24/2026",
+          "payee": "To Be Categorized",
+          "referenceNumber": "72",
+          "source": "vendor-transaction-list",
+          "transactionType": "Check",
+          "vendorName": "To Be Categorized",
+          "updatedAt": "2026-07-09T21:23:05.792903+00:00"
+        }
+      },
+      "tx-0002": {
+        "attachmentId": "1000000091",
+        "completedAt": "2026-07-09T21:23:09.946070+00:00",
+        "errorMessage": "llm-failed",
+        "failureCode": "EXTRACTION_FAILED",
+        "mode": "live-run",
+        "outcome": {
+          "attachmentFileName": "CheckImage-2.pdf",
+          "ocrStatus": "no-text",
+          "processingMethod": "llm-failed",
+          "updateStatus": "no-payee"
+        },
+        "purchaseId": "148",
+        "sourceIndex": 1,
+        "stage": "COMPLETE",
+        "startedAt": "2026-07-09T21:23:05.863005+00:00",
+        "status": "FAILED",
+        "transaction": {
+          "amount": "$100.00",
+          "category": "Cost of Goods Sold",
+          "date": "06/24/2026",
+          "payee": "To Be Categorized",
+          "referenceNumber": "71",
+          "source": "vendor-transaction-list",
+          "transactionType": "Check",
+          "vendorName": "To Be Categorized",
+          "updatedAt": "2026-07-09T21:23:09.946070+00:00"
+        }
+      }
+    }
+  },
+  "summary": {
+    "failed": 2,
+    "pending": 0,
+    "processing": 0,
+    "succeeded": 0,
+    "total": 2
+  },
+  "uid": "zFvJuDZOdnNNsyoyUhlkbSd9cSE3",
+  "updatedAt": "July 9, 2026 at 4:23:10 PM UTC-5"
+}

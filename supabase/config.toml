@@ -1,0 +1,4 @@
+project_id = "ledgerflow"
+
+[functions.trello]
+verify_jwt = true

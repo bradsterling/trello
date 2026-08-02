@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmYMZQwDmJvFht7LfHlORhd5m8XHEo7qSOLyhkUksAcobGy0Rvg6Ip/ggrkobhpXH9fWhPZPFf5k5mO3TgSXrnSD+qFhy/Jc2E435S9sr1xXHndtWJSLXrOKE2tddIkEHDPdgRXChd87ICIHa6sLR0zvo2AvYVlMOx5foxPePISXlCdMmxB+8RVwXWb9m1Sc1t7dlqhMmUkcACq4Vq1EgOgsGcjdMCMHWB85SpGW/zog6c1b+nzXz+rFPA/u5Llrz8ByJJLhTIX4TSPQkNhZYK1WDvUDxvE9NJyHB710jf+kReJtTPBrlrwu8lW3vDf/2142rWMZxIQ4Q0kctpfxmOQIDAQAB",
+  "name": "ledgerflow for Trello & QuickBooks",
+  "description": "Match Trello transaction lists, reconcile totals, and transfer split lines to QuickBooks.",
+  "version": "0.1.0",
+  "permissions": [
+    "storage",
+    "sidePanel",
+    "activeTab",
+    "scripting",
+    "identity",
+    "debugger"
+  ],
+  "host_permissions": [
+    "https://*.intuit.com/*",
+    "https://identitytoolkit.googleapis.com/*",
+    "https://accounts.google.com/*",
+    "https://us-central1-quickbooks-trello-d4fa3.cloudfunctions.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open ledgerflow",
+    "default_icon": {
+      "16": "assets/icons/ledgerflow-16.png",
+      "32": "assets/icons/ledgerflow-32.png",
+      "48": "assets/icons/ledgerflow-48.png",
+      "128": "assets/icons/ledgerflow-128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icons/ledgerflow-16.png",
+    "32": "assets/icons/ledgerflow-32.png",
+    "48": "assets/icons/ledgerflow-48.png",
+    "128": "assets/icons/ledgerflow-128.png"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.intuit.com/*"
+      ],
+      "js": [
+        "content/quickbooks-adapter.js",
+        "content/content-script.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

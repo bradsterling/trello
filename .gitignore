@@ -1,0 +1,11 @@
+.env
+.supabase/
+supabase/.temp/
+
+# Local Firebase/Google OAuth configuration contains project credentials.
+trello-quickbooks-extension/lib/auth-config.js
+
+# Chrome extension signing keys are private and must stay outside the folder
+# loaded as an unpacked extension. The public key in manifest.json preserves
+# the extension ID during development.
+extension-keys/*.pem
