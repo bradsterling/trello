@@ -14,8 +14,6 @@
   ],
   "host_permissions": [
     "https://*.intuit.com/*",
-    "https://identitytoolkit.googleapis.com/*",
-    "https://accounts.google.com/*",
     "https://us-central1-quickbooks-trello-d4fa3.cloudfunctions.net/*"
   ],
   "background": {

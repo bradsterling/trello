@@ -1,5 +1,5 @@
-import { signInWithGoogle, getAuthSession, signOut } from '../lib/auth.js';
-import { authorizeWithTrello, getSettings, loadBoards, loadCards, loadLists } from '../lib/trello.js';
+import { getAuthSession } from '../lib/auth.js';
+import { authorizeWithTrello, disconnectTrello, getSettings, loadBoards, loadCards, loadLists } from '../lib/trello.js';
 import { authenticatedFetch } from '../lib/auth.js';
 
 const $ = (id) => document.getElementById(id);
@@ -21,15 +21,26 @@ function show(id, visible) { $(id).classList.toggle('hidden', !visible); }
 function showSignInHome(message = 'Connect Trello to get started.') {
   show('settings', false); show('listsView', false); show('onboarding', true);
   show('signOut', false); show('settingsButton', false); show('accountMenu', false);
+  onboardingTrelloToken = '';
   $('onboardingWorkspaceField').classList.add('hidden');
-  $('onboardingCopy').textContent = 'Sign in securely with Google, then connect the Trello workspace you use for Ledgerflow.';
-  $('onboardingConnect').querySelector('span').textContent = 'Login with Google';
+  $('onboardingCopy').textContent = 'Connect the private Trello account used by this installation, then enter its Workspace ID.';
+  $('onboardingConnect').querySelector('span').textContent = 'Connect with Trello';
   $('onboardingOrganizationId').value = '';
+  $('token').value = '';
   status(message);
 }
 
 function showAuthenticatedApp() {
   show('onboarding', false); show('listsView', true); show('signOut', true); show('settingsButton', true);
+}
+
+async function showTrelloReconnect(error) {
+  if (error?.code !== 'TRELLO_REAUTH_REQUIRED') return false;
+  const settings = await getSettings();
+  showSignInHome('Your Trello token was revoked or expired. Connect Trello again.');
+  $('onboardingOrganizationId').value = settings.organizationId;
+  status('Your Trello connection needs to be renewed.', 'error');
+  return true;
 }
 
 function setFlowStep(step) {
@@ -182,13 +193,7 @@ async function refresh() {
   }
   catch (error) {
     status(error.message, 'error'); $('lists').textContent = error.message;
-    if (/Trello request failed \((401|403)\)/.test(error.message)) {
-      await chrome.storage.local.remove('token');
-      show('listsView', false); show('onboarding', true);
-      const settings = await getSettings();
-      $('onboardingOrganizationId').value = settings.organizationId;
-      status('Your Trello connection needs to be renewed.', 'error');
-    }
+    await showTrelloReconnect(error);
   }
   finally { $('refresh').disabled = false; }
 }
@@ -197,7 +202,7 @@ async function selectList(list) {
   if (!list.parsed.valid) { status('This list name does not match the expected format.', 'error'); return; }
   selectedList = list; $('cardsHeading').textContent = 'Review split lines'; $('cards').textContent = 'Loading cards…'; $('cardCount').textContent = '…'; show('cardsView', true); show('lists', false); setFlowStep(2);
   try { const cards = await loadCards(list.id); selectedCards = cards; const container = $('cards'); container.replaceChildren(); $('cardCount').textContent = cards.length; $('cardsSummary').textContent = `${list.parsed.source} · ${list.parsed.date} · ${list.parsed.displayAmount}. Each card becomes one QuickBooks split line.`; if (!cards.length) container.textContent = 'No cards found.'; for (const card of cards) { const button = document.createElement('button'); button.type = 'button'; button.className = 'item'; const title = document.createElement('strong'); title.textContent = card.name; button.append(title); const amount = document.createElement('span'); amount.textContent = Number.isFinite(card.amount) ? card.displayAmount : 'Amount missing'; button.append(amount); container.append(button); } updateReconciliation(); status(`${cards.length} card${cards.length === 1 ? '' : 's'} ready to review`); }
-  catch (error) { $('cards').textContent = error.message; status(error.message, 'error'); }
+  catch (error) { $('cards').textContent = error.message; status(error.message, 'error'); await showTrelloReconnect(error); }
 }
 
 async function pasteRecommended(list, actionButton) {
@@ -207,6 +212,9 @@ async function pasteRecommended(list, actionButton) {
     selectedList = list;
     selectedCards = await loadCards(list.id);
     await paste();
+  } catch (error) {
+    status(error.message, 'error');
+    await showTrelloReconnect(error);
   } finally {
     actionButton.disabled = false;
     actionButton.textContent = 'Paste match';
@@ -264,6 +272,8 @@ async function saveSettings() {
   const previous = await getSettings();
   await authenticatedFetch('/trello', { method: 'POST', body: JSON.stringify({ action: 'connect', organizationId, token }) });
   await chrome.storage.local.set({ organizationId, ...(previous.organizationId !== organizationId ? { selectedBoardId: '' } : {}) });
+  $('token').value = '';
+  onboardingTrelloToken = '';
   show('settings', false); show('onboarding', false); show('listsView', true); status('Settings saved on this browser.'); refresh();
 }
 
@@ -289,44 +299,34 @@ chrome.runtime.onMessage.addListener((message, sender) => {
   });
 });
 
-const headerMenu = document.querySelector('.header-menu'); $('settingsButton').addEventListener('click', () => { const menu = $('accountMenu'); const isOpen = !menu.classList.contains('hidden'); show('accountMenu', !isOpen); $('settingsButton').setAttribute('aria-expanded', String(!isOpen)); }); $('manageConnection').addEventListener('click', openSettings); document.addEventListener('click', (event) => { if (!headerMenu.contains(event.target)) { show('accountMenu', false); $('settingsButton').setAttribute('aria-expanded', 'false'); } }); document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { show('accountMenu', false); $('settingsButton').setAttribute('aria-expanded', 'false'); } }); $('saveSettings').addEventListener('click', saveSettings); $('cancelSettings').addEventListener('click', () => show('settings', false)); $('settings').addEventListener('click', (event) => { if (event.target === $('settings')) show('settings', false); }); $('refresh').addEventListener('click', refresh); $('boardSelect').addEventListener('change', async () => { selectedBoardId = $('boardSelect').value; await chrome.storage.local.set({ selectedBoardId }); try { await loadBoardLists(); } catch (error) { status(error.message, 'error'); $('lists').textContent = error.message; } }); $('backToLists').addEventListener('click', () => { show('cardsView', false); show('lists', true); setFlowStep(1); status('Choose a matching list.'); }); $('pasteAll').addEventListener('click', paste);
+const headerMenu = document.querySelector('.header-menu'); $('settingsButton').addEventListener('click', () => { const menu = $('accountMenu'); const isOpen = !menu.classList.contains('hidden'); show('accountMenu', !isOpen); $('settingsButton').setAttribute('aria-expanded', String(!isOpen)); }); $('manageConnection').addEventListener('click', openSettings); document.addEventListener('click', (event) => { if (!headerMenu.contains(event.target)) { show('accountMenu', false); $('settingsButton').setAttribute('aria-expanded', 'false'); } }); document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { show('accountMenu', false); $('settingsButton').setAttribute('aria-expanded', 'false'); } }); $('saveSettings').addEventListener('click', saveSettings); $('cancelSettings').addEventListener('click', () => show('settings', false)); $('settings').addEventListener('click', (event) => { if (event.target === $('settings')) show('settings', false); }); $('refresh').addEventListener('click', refresh); $('boardSelect').addEventListener('change', async () => { selectedBoardId = $('boardSelect').value; await chrome.storage.local.set({ selectedBoardId }); try { await loadBoardLists(); } catch (error) { status(error.message, 'error'); $('lists').textContent = error.message; await showTrelloReconnect(error); } }); $('backToLists').addEventListener('click', () => { show('cardsView', false); show('lists', true); setFlowStep(1); status('Choose a matching list.'); }); $('pasteAll').addEventListener('click', paste);
 $('authorizeTrello').addEventListener('click', authorizeTrello);
 $('signOut').addEventListener('click', async () => {
   const button = $('signOut');
   button.disabled = true;
   try {
-    await signOut();
-    onboardingTrelloToken = '';
-    showSignInHome('Signed out.');
+    await disconnectTrello();
+    showSignInHome('Trello disconnected.');
   } catch (error) { status(error.message, 'error'); }
   finally { button.disabled = false; }
 });
 async function startOnboarding() {
-  const auth = await getAuthSession();
-  const settings = await getSettings();
-  if (auth && settings.organizationId) { showAuthenticatedApp(); refresh(); return; }
-  $('onboardingOrganizationId').value = settings.organizationId;
-  showSignInHome();
+  try {
+    await getAuthSession();
+    const settings = await getSettings();
+    if (settings.organizationId) { showAuthenticatedApp(); refresh(); return; }
+    $('onboardingOrganizationId').value = settings.organizationId;
+    showSignInHome();
+  } catch (error) {
+    showSignInHome(error.message);
+    status(error.message, 'error');
+  }
 }
 $('onboardingManual').addEventListener('click', () => { show('onboarding', false); openSettings(); });
 $('onboardingConnect').addEventListener('click', async () => {
   const button = $('onboardingConnect');
   button.disabled = true;
   try {
-    if (!await getAuthSession()) {
-      status('Opening Google sign-in…');
-      const auth = await signInWithGoogle();
-      $('onboardingCopy').textContent = `Signed in as ${auth.email || 'your Google account'}. Connect Trello to finish setup.`;
-      const existingSettings = await getSettings();
-      if (existingSettings.organizationId) {
-        showAuthenticatedApp();
-        status('Existing Trello workspace restored.');
-        await refresh();
-        return;
-      }
-      button.textContent = 'Connect Trello';
-      return;
-    }
     if (onboardingTrelloToken) {
       const organizationId = $('onboardingOrganizationId').value.trim();
       if (!organizationId) throw new Error('Enter your Trello Workspace ID to continue.');
@@ -340,7 +340,7 @@ $('onboardingConnect').addEventListener('click', async () => {
     onboardingTrelloToken = await authorizeTrello();
     if (!onboardingTrelloToken) throw new Error('Trello authorization returned no token.');
     $('onboardingWorkspaceField').classList.remove('hidden');
-    $('onboardingCopy').textContent = 'Trello is connected. Enter your Workspace ID to finish setup.';
+    $('onboardingCopy').textContent = 'Trello is connected. Enter the Workspace ID whose boards this installation should show.';
     button.textContent = 'Save Workspace ID';
     status('Enter your Workspace ID to finish setup.');
     $('onboardingOrganizationId').focus();

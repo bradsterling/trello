@@ -1,10 +1,15 @@
 import { formatCard, parseListName } from './parser.js';
 import { authenticatedFetch } from './auth.js';
+import { AUTH_CONFIG, assertAuthConfig } from './auth-config.js';
 
 export async function getSettings() {
   const local = await chrome.storage.local.get({ organizationId: '', selectedBoardId: '' });
+  // Never infer a workspace from an arbitrary server-side connection. A user
+  // can have more than one Trello workspace, and the backend's no-ID lookup
+  // is intentionally not a workspace selection mechanism.
+  if (!local.organizationId) return { ...local, session: true };
   try {
-    const profile = await authenticatedFetch('/trello', { method: 'POST', body: JSON.stringify({ action: 'profile', ...(local.organizationId ? { organizationId: local.organizationId } : {}) }) });
+    const profile = await authenticatedFetch('/trello', { method: 'POST', body: JSON.stringify({ action: 'profile', organizationId: local.organizationId }) });
     if (profile.organization_id && profile.organization_id !== local.organizationId) {
       await chrome.storage.local.set({ organizationId: profile.organization_id });
       return { ...local, organizationId: profile.organization_id, session: true };
@@ -16,16 +21,17 @@ export async function getSettings() {
 }
 
 export async function authorizeWithTrello() {
+  assertAuthConfig();
   // Chrome's WebAuthFlow callback is an HTTPS chromiumapp.org origin.
   // Use the base callback URL so Trello's allowed-origin check matches it.
   const returnUrl = chrome.identity.getRedirectURL();
   const url = new URL('https://trello.com/1/authorize');
   url.search = new URLSearchParams({
-    expiration: '30days',
+    expiration: 'never',
     name: 'LedgerFlow',
     scope: 'read',
     response_type: 'token',
-    key: '2d47586d88b4fd4978ae042fe255b773',
+    key: AUTH_CONFIG.trelloApiKey,
     callback_method: 'fragment',
     return_url: returnUrl
   });
@@ -36,8 +42,12 @@ export async function authorizeWithTrello() {
   return decodeURIComponent(token);
 }
 
-export async function signOut() {
-  await chrome.storage.local.remove(['organizationId', 'selectedBoardId']);
+export async function disconnectTrello() {
+  try {
+    await authenticatedFetch('/trello', { method: 'POST', body: JSON.stringify({ action: 'disconnect' }) });
+  } finally {
+    await chrome.storage.local.remove(['organizationId', 'selectedBoardId']);
+  }
 }
 
 function requireSettings(settings, required = ['organizationId']) {
